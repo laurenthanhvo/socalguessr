@@ -1,10 +1,3 @@
-"""
-Standalone inference script for Gradescope.
-
-This file is intentionally self-contained so you can submit it together with a
-single checkpoint file in a top-level zip.
-"""
-
 from __future__ import annotations
 
 from pathlib import Path
