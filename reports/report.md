@@ -6,8 +6,6 @@
 
 I evaluated myself on the SoCalGuessr human baseline game at `https://eldridgejm.github.io/SoCalGuessr/`. My final score was **19/50 = 38%**. The confusion matrix screenshot from that run is shown below. The human baseline is much lower than the model validation accuracy, which suggests that the learned visual features are capturing location cues that are difficult to identify consistently by hand.
 
-![Human baseline result and confusion matrix screenshot from the SoCalGuessr website.](human_baseline.png)
-
 ## **Final Model Architecture**
 
 My final model is a **pretrained EfficientNet-B0** implemented with `torchvision`. I used the ImageNet-pretrained EfficientNet-B0 backbone and replaced the final classifier so that the model outputs logits for the six city classes: Anaheim, Bakersfield, Los Angeles, Riverside, SLO, and San Diego. In code, the final classifier is changed from the default 1000-way ImageNet classifier to a new linear layer with input dimension 1280 and output dimension 6.
