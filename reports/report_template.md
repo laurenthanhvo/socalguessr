@@ -27,6 +27,7 @@ I trained the model using the provided training images, where the class label is
 
 ```bash
 python train.py --data-dir data --arch efficientnet_b0 --epochs 12 --batch-size 64 --lr 1e-4
+```
 
 The model was trained with Adam and cross-entropy loss for 12 epochs using a learning rate of 1e-4, weight decay 1e-4, batch size 64, and image size 224 x 224. Training was run on CPU.
 
